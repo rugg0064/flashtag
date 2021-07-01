@@ -1,0 +1,131 @@
+﻿$base-color: #111827;
+$legend-color: #111827;
+$score-background: #111827;
+$score-color: #374151;
+
+.scoreboard {
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	font-family: opendyslexic3-regular;
+	font-weight: 400;
+	font-size: 30px;
+	color: white;
+	padding: 0px 0px;
+	margin: 0px 0px;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+
+
+	&.open {
+		opacity: 1;
+	}
+
+	.canvas {
+		//background-image: linear-gradient(to bottom, rgba(126, 168, 9, 0.8), rgba(86, 130, 10, 0.8));
+		background-color: $base-color;
+		position: absolute;
+		width: 40%;
+		height: 60%;
+		left: 30%;
+		top: 20%;
+		align-items: center;
+		justify-content: start;
+		flex-direction: column;
+		border-radius: 25px;
+		overflow: hidden;
+
+		.header {
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 15px;
+			//padding: 10px 10px;
+			font-size: 30px;
+			width: 100%;
+			height: 10%;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: initial;
+			border-bottom: 5px solid black;
+
+			.gamemode {
+				width: 50%;
+				height: 100%;
+			}
+
+			.totalPlayers {
+				width: 50%;
+				height: 100%;
+			}
+		}
+
+		.content {
+			//font-size: 25%;
+			font-size: 35px;
+			width: 100%;
+			height: 75%;
+			flex-direction: column;
+			align-items: start;
+			justify-content: start;
+
+			.legend {
+				padding-bottom: 7px;
+				width: 100%;
+				background-color: $legend-color;
+				flex-direction: row;
+				align-content: space-evenly;
+				justify-content: center;
+				align-items: center;
+				font-size: 30px;
+				height: 8%;
+				text-align: center;
+
+				.name {
+					width: 60%;
+				}
+
+				.taggedCount {
+					width: 40%;
+				}
+			}
+
+			.scores {
+				pixel-snap: 0;
+				background-color: $score-background;
+				width: 100%;
+				height: 92%;
+				display: block;
+				margin: 0px 0px;
+				display: block;
+				text-align: center;
+
+				.score {
+					//border: 2px solid black;
+					width: 100%;
+					min-width: 100%;
+					background-color: $score-color;
+					flex-direction: row;
+					align-content: space-evenly;
+					justify-content: center;
+					align-items: center;
+					height: 10%;
+					position: absolute;
+					padding-bottom: 16px;
+
+					.name {
+						//border: 5px solid white;
+						width: 60%;
+						//height: 100%;
+					}
+
+					.taggedCount {
+						//border: 5px solid white;
+						width: 40%;
+						//height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
